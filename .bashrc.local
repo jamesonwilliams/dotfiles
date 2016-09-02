@@ -5,5 +5,7 @@ export EDITOR=/usr/bin/vim
 
 export MAKEFLAGS="-j$(nproc)"
 
-# Make the caps lock into an escape key
-setxkbmap -option caps:escape
+# These don't exist on some non-Debuntu systems. Would rather
+# potentially re-alias them instead of risking not being active.
+alias grep='grep --color'
+alias rgrep='grep -R --color'
