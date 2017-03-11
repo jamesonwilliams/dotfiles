@@ -9,7 +9,7 @@ user='\u'
 
 function get_color_for_host() {
     unique_id=$(hostname -s | cksum | cut -f1 -d" ")
-    host_color=$(($(($unique_id % 13)) + 1))
+    host_color=$(($(($unique_id % 130)) + 50))
 
     echo "$host_color"
 }
