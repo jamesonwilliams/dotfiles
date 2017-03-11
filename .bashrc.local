@@ -3,9 +3,23 @@ export EDITOR=/usr/bin/vim
 
 export FIGNORE=".git:.svn"
 
-export MAKEFLAGS="-j$(nproc)"
+if [ -x "$(which nproc)" ]; then
+    export MAKEFLAGS="-j$(nproc)"
+elif [ -x "$(which sysctl)" ]; then
+    export MAKEFLAGS="-j$(sysctl -n hw.ncpu)"
+fi
 
-# These don't exist on some non-Debuntu systems. Would rather
-# potentially re-alias them instead of risking not being active.
-alias grep='grep --color'
-alias rgrep='grep -R --color'
+# Make Mac more like a real computer
+if [ "$(uname)" == "Darwin" ]; then
+    export CLICOLOR=1
+
+    alias ls='ls -Gh'
+
+    alias grep='grep --color'
+    alias rgrep='grep -R --color'
+fi
+
+path() {
+    echo $PATH | tr ':' '\n'
+}
+
