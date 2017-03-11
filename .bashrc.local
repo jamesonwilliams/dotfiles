@@ -1,7 +1,7 @@
-export PS1="\u@\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;39m\]\h\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]\[$(tput sgr0)\]:\[\033[38;5;245m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\[$(tput sgr0)\]\\$ "
-
 export PAGER=/usr/bin/less
 export EDITOR=/usr/bin/vim
+
+export FIGNORE=".git:.svn"
 
 export MAKEFLAGS="-j$(nproc)"
 

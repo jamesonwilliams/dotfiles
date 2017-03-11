@@ -1,0 +1,10 @@
+
+alias bb='brazil-build'
+
+apollo_dirs=$(find -L /apollo/env/ -maxdepth 2 -mindepth 2 -name "bin")
+
+for dir in $apollo_dirs; do
+    PATH="$dir:$PATH"
+done
+
+export PATH
