@@ -2,6 +2,9 @@
 
 set -x 
 
+mkdir -p ~/.vim/plugin
+curl -s https://raw.githubusercontent.com/bogado/file-line/master/plugin/file_line.vim > ~/.vim/plugin/file_line.vim
+
 install .vimrc ~/
 install .inputrc ~/
 
