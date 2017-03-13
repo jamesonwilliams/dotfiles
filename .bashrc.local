@@ -14,10 +14,10 @@ if [ "$(uname)" == "Darwin" ]; then
     export CLICOLOR=1
 
     alias ls='ls -Gh'
-
-    alias grep='grep --color'
-    alias rgrep='grep -R --color'
 fi
+
+alias grep='grep --color'
+alias rgrep='grep -R --color'
 
 path() {
     echo $PATH | tr ':' '\n'
