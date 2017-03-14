@@ -1,10 +1,19 @@
 
-alias bb='brazil-build'
+if [ -d /apollo/env ]; then
+    alias bb='brazil-build'
 
-apollo_dirs=$(find -L /apollo/env/ -maxdepth 2 -mindepth 2 -name "bin")
+    apollo_dirs=$(find -L /apollo/env/ -maxdepth 2 -mindepth 2 -name "bin")
 
-for dir in $apollo_dirs; do
-    PATH="$dir:$PATH"
-done
+    for dir in $apollo_dirs; do
+        PATH="$dir:$PATH"
+    done
 
-export PATH
+    export PATH
+
+    # Note: this might be a RHEL thing, not an "Amazon" thing per say.
+    # Note2: but when else would I use RHEL? :-?
+    for file in /etc/bash_completion.d/*; do
+        source $file
+    done
+fi
+
