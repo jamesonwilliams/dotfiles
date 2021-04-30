@@ -11,6 +11,7 @@ install .inputrc ~/
 install .bashrc.amazon ~/
 install .bashrc.ps1 ~/
 install .bashrc.local ~/
+install .bashrc.android ~/
 if [ "$(uname)" == "Darwin" ]; then
     install .bashrc.darwin
     echo ". ~/.bashrc" > ~/.bash_profile
@@ -22,6 +23,7 @@ cat >> ~/.bashrc <<- EOF
 [ -f ~/.bashrc.ps1 ] && . ~/.bashrc.ps1
 [ -f ~/.bashrc.amazon ] && . ~/.bashrc.amazon
 [ -f ~/.bashrc.darwin ] && . ~/.bashrc.darwin
+[ -f ~/.bashrc.android ] && . ~/.bashrc.android
 
 EOF
 
