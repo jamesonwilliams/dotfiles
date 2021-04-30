@@ -92,7 +92,7 @@ match OverLength /\%72v.*/
 " autocmd BufWritePre * :%s/\s\+$//e
 
 " Ignore whitespace when using vimdiff.
-set diffopt+=iwhite
+" set diffopt+=iwhite
 
 " Tell vim to remember certain things when we exit
 "  '10  :  marks will be remembered for up to 10 previously edited files
