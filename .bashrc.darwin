@@ -1,0 +1,7 @@
+# Make Mac more like a real computer
+if [ "$(uname)" == "Darwin" ]; then
+    export CLICOLOR=1
+    alias ls='ls -Gh'
+    export BASH_SILENCE_DEPRECATION_WARNING=1
+fi
+

@@ -11,13 +11,19 @@ install .inputrc ~/
 install .bashrc.amazon ~/
 install .bashrc.ps1 ~/
 install .bashrc.local ~/
+if [ "$(uname)" == "Darwin" ]; then
+    install .bashrc.darwin
+    echo ". ~/.bashrc" > ~/.bash_profile
+fi
 
 cat >> ~/.bashrc <<- EOF
 # Installed by https://github.com/jamesonwilliams/dotfiles/blob/master/install.sh
 [ -f ~/.bashrc.local ] && . ~/.bashrc.local
 [ -f ~/.bashrc.ps1 ] && . ~/.bashrc.ps1
 [ -f ~/.bashrc.amazon ] && . ~/.bashrc.amazon
+[ -f ~/.bashrc.darwin ] && . ~/.bashrc.darwin
 
 EOF
 
 [ -d ~/.config ] && install .config/user-dirs.dirs ~/.config/
+

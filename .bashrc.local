@@ -9,13 +9,6 @@ elif [ -x "$(which sysctl)" ]; then
     export MAKEFLAGS="-j$(sysctl -n hw.ncpu)"
 fi
 
-# Make Mac more like a real computer
-if [ "$(uname)" == "Darwin" ]; then
-    export CLICOLOR=1
-
-    alias ls='ls -Gh'
-fi
-
 alias grep='grep --color'
 alias rgrep='grep -R --color'
 
