@@ -1,7 +1,14 @@
-# Make Mac more like a real computer
-if [ "$(uname)" == "Darwin" ]; then
-    export CLICOLOR=1
-    alias ls='ls -Gh'
-    export BASH_SILENCE_DEPRECATION_WARNING=1
-fi
+# Make Mac more like a real, GNU/Linux computer.
+
+# Colors aid accessibility on the CLI.
+export CLICOLOR=1
+alias ls='ls -Gh'
+
+# We use Bash in this household, and we ain't never gonna change, not
+# for nobody, no how. And for damn sure, not for no "Apple Computer, inc."
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# Setup git completion.
+git_completion='/Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash'
+[ -x "$(which git)" ] && [ -f "$git_completion" ] && source "$git_completion"
 

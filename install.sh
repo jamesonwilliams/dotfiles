@@ -13,7 +13,7 @@ install .bashrc.ps1 ~/
 install .bashrc.local ~/
 install .bashrc.android ~/
 if [ "$(uname)" == "Darwin" ]; then
-    install .bashrc.darwin
+    install .bashrc.darwin ~/
     echo ". ~/.bashrc" > ~/.bash_profile
 fi
 
