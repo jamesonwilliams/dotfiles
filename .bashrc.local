@@ -16,3 +16,5 @@ path() {
     echo $PATH | tr ':' '\n'
 }
 
+[ -d $HOME/bin ] && export PATH="$HOME/bin:$PATH"
+
