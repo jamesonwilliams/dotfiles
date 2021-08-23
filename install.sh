@@ -8,7 +8,7 @@ curl -s https://raw.githubusercontent.com/bogado/file-line/master/plugin/file_li
 install .vimrc ~/
 install .inputrc ~/
 
-install .bashrc.amazon ~/
+install .bashrc.reddit ~/
 install .bashrc.ps1 ~/
 install .bashrc.local ~/
 install .bashrc.android ~/
@@ -21,7 +21,7 @@ cat >> ~/.bashrc <<- EOF
 # Installed by https://github.com/jamesonwilliams/dotfiles/blob/master/install.sh
 [ -f ~/.bashrc.local ] && . ~/.bashrc.local
 [ -f ~/.bashrc.ps1 ] && . ~/.bashrc.ps1
-[ -f ~/.bashrc.amazon ] && . ~/.bashrc.amazon
+[ -f ~/.bashrc.reddit ] && . ~/.bashrc.reddit
 [ -f ~/.bashrc.darwin ] && . ~/.bashrc.darwin
 [ -f ~/.bashrc.android ] && . ~/.bashrc.android
 
