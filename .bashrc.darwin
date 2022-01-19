@@ -9,6 +9,6 @@ alias ls='ls -Gh'
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # Setup git completion.
-git_completion='/Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash'
+git_completion='/Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash'
 [ -x "$(which git)" ] && [ -f "$git_completion" ] && source "$git_completion"
 
