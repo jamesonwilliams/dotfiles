@@ -12,3 +12,5 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 git_completion='/Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash'
 [ -x "$(which git)" ] && [ -f "$git_completion" ] && source "$git_completion"
 
+# If brew is available, set it up.
+[ -x '/opt/homebrew/bin/brew' ] && eval "$(/opt/homebrew/bin/brew shellenv)"
